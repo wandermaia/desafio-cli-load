@@ -54,3 +54,36 @@ docker run <sua_imagem_docker> —url=http://google.com —requests=1000 —conc
 
 ## Entrega
 
+```bash
+
+go mod init github.com/wandermaia/desafio-cli-load
+
+do mod tidy
+
+```
+
+### Como usar
+
+
+Compilar e construir a imagem Docker:
+
+
+```bash
+
+docker build -t cli-load .
+
+```
+
+
+
+Executar o contêiner Docker:
+
+
+
+```bash
+
+docker run cli-load --url=https://google.com --requests=20 --concurrency=4
+
+go run cmd/main.go --url=https://google.com --requests=20 --concurrency=4
+
+```
