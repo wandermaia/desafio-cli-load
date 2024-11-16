@@ -54,7 +54,7 @@ docker run <sua_imagem_docker> —url=http://google.com —requests=1000 —conc
 
 # Execução do Desafio
 
-O sistema utiliza a seguinte hierarquia de arquivos e pastas:
+O sistema utiliza a seguinte estrutura de diretórios:
 
 ```bash
 
@@ -96,7 +96,7 @@ wander@bsnote283:~desafio-cli-load$
 
 ## Execução da Aplicação
 
-Para executar o projeto, devemos primeiramente criar a imagem de container, utilizando o comando docker seguir a partir da pasta raiz do projeto:
+Para executar o projeto, devemos primeiramente criar a imagem de container, utilizando o comando `docker build`, conforme o exemplo a seguir (deve ser executado na raiz do projeto):
 
 ```bash
 
@@ -122,7 +122,7 @@ wander@bsnote283:~desafio-cli-load$
 
 ```
 
-Após a execução do comando anterior, já teremos a imagem e podemos executar a aplicação através do docker, confomre o comando abaixo:
+Após a execução do comando anterior, já teremos a imagem do container e podemos executar a aplicação, conforme o comando abaixo:
 
 
 ```bash
@@ -150,4 +150,11 @@ wander@bsnote283:~desafio-cli-load$
 Para este exemplo, foi utilizado o comando `docker run cli-load --url=https://google.com --requests=10 --concurrency=4`
 
 
+## Informações adicionais
+
+- Foi implementado um timeout fixo de 2 (dois) segundos para as requisições.
+
+- Não é permitido um valor de **requests** menor do que 1 (um).
+
+- Não é permitido um valor de **concurrency** menor do que 1 (um).
 
