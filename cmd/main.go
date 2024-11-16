@@ -37,5 +37,8 @@ func main() {
 	fmt.Printf("Tempo total gasto: %v\n", duration)
 	fmt.Printf("Total de requests realizadas: %d\n", report.TotalRequests)
 	fmt.Printf("Requests com status 200: %d\n", report.Status200)
-	fmt.Printf("Distribuição de status HTTP: %v\n\n", report.StatusDistribution)
+	fmt.Printf("Distribuição de status HTTP: \n\n")
+	for status, quantidade := range report.StatusDistribution {
+		fmt.Printf("Status Code: %v, Quantidade de ocorrências: %v\n\n", status, quantidade)
+	}
 }
